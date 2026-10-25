@@ -10,7 +10,7 @@
     "startQuiz": "Start the Quiz",
     "howItWorks": "How Elections Work",
     "hotTopics": "Hot Topics",
-    "platforms": "Everything You Wanted to Know About the Parties",
+    "platforms": "Party Platform Summaries",
     "challenge": "Bubble Breaker (Know the Other Side)",
     "about": "About & How the Algorithm Works",
     "menuButton": "Menu",
@@ -340,9 +340,9 @@
     }
   },
   "platforms": {
-    "pageTitle": "Elections 2026 – Everything You Wanted to Know About the Parties",
+    "pageTitle": "Party Platforms for the 2026 Elections, in Brief",
     "pageDescription": "A summary of the positions of parties running in the 2026 elections, topic by topic: security, economy, judiciary, religion and state, and society.",
-    "heading": "Elections 2026 – Everything You Wanted to Know About the Parties",
+    "heading": "Party Platform Summaries for the 2026 Elections",
     "subtitle": "A neutral, concise, and comprehensive overview of party positions on core issues.",
     "searchPlaceholder": "Search by party name or leader",
     "allFilter": "All",
@@ -365,7 +365,7 @@
     }
   },
   "partyProfile": {
-    "backToPlatforms": "Back to all parties",
+    "backToPlatforms": "Back to party platforms",
     "titleTemplate": "{party} - Positions and Platform for the 2026 Elections",
     "descriptionTemplate": "{description} See how well you match {party} on the Election Compass.",
     "platformHeading": "Main platform points by topic",
