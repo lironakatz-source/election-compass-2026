@@ -13,7 +13,7 @@
 export const CANDIDATE_LISTS_INDEX_URL = "https://www.gov.il/he/pages/candidates-lists-26";
 
 /** The date the lists below were last checked against gov.il. */
-export const CANDIDATE_LISTS_CHECKED_ON = "2026-10-24";
+export const CANDIDATE_LISTS_CHECKED_ON = "2026-10-26";
 
 /** Places shown before "show full list", and the places that may carry a link. */
 export const TOP_PLACES = 20;
