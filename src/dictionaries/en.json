@@ -646,6 +646,7 @@
     "womenTitle": "What this means",
     "womenText": "The share of women in the list's realistic places: the first {places} places, which the list was expected to win based on an average of {polls} polls (from {from} to {to}). Figure from the {source}.",
     "womenSource": "Israel Democracy Institute",
+    "womenChanged": "The list changed after IDI's analysis (a withdrawal at place {place}, {date}), so this figure may be out of date.",
     "womenNoData": "Insufficient data",
     "showAll": "Show the full list ({n} more)",
     "showTop": "Show only the first {n}",

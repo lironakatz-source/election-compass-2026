@@ -37,6 +37,13 @@ export interface WomenRepresentation {
   realisticPlaces: number;
   /** As IDI publishes it, e.g. 12.5. */
   womenPercent: number;
+  /**
+   * Set when the list changed inside its realistic places after IDI's
+   * analysis (from the committee's notices): the figure may be out of date,
+   * and the section says so. We never recompute it (the official list does
+   * not state gender).
+   */
+  changedAfter?: { place: number; date: string };
 }
 
 /** IDI, "בחירות 2026: ייצוג נשים בכנסת הבאה" (22.9.2026). */
@@ -57,7 +64,8 @@ export const womenRepresentation: Record<string, WomenRepresentation> = {
   "yisrael-beiteinu": { realisticPlaces: 9, womenPercent: 33 },
   "yahadut-hatorah": { realisticPlaces: 8, womenPercent: 0 },
   shas: { realisticPlaces: 8, womenPercent: 0 },
-  "hadash-taal": { realisticPlaces: 8, womenPercent: 12.5 },
+  // Place 3 withdrew on 2.10.2026 (committee notice), after IDI's 22.9 analysis.
+  "hadash-taal": { realisticPlaces: 8, womenPercent: 12.5, changedAfter: { place: 3, date: "2026-10-02" } },
   "otzma-yehudit": { realisticPlaces: 8, womenPercent: 25 },
   "religious-zionism": { realisticPlaces: 6, womenPercent: 17 },
   raam: { realisticPlaces: 5, womenPercent: 20 },

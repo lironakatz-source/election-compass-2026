@@ -108,6 +108,14 @@ export function CandidateListItem({ party }: { party: Party }) {
                 </>
               );
             })()}
+            {list.women.changedAfter && (
+              <span className="mt-2 block font-semibold text-navy">
+                {fill(t.womenChanged, {
+                  place: number.format(list.women.changedAfter.place),
+                  date: date(list.women.changedAfter.date),
+                })}
+              </span>
+            )}
           </ExplainBox>
         )}
 

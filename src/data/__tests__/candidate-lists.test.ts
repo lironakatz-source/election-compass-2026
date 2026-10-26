@@ -47,6 +47,24 @@ describe("candidate lists", () => {
     }
   });
 
+  test("a change inside the realistic places after IDI's analysis is flagged", () => {
+    // Committee notices name the original place and the date, e.g.
+    // "... (שהוצב במקום ה-3 ברשימה), התפטר ביום 2.10.2026 ...".
+    const placeAndDate = /במקום ה-(\d+)[^.]*?(?:ביום|בתאריך) (\d{1,2})\.(\d{1,2})\.(\d{4})/g;
+    for (const [id, list] of Object.entries(candidateListsCore)) {
+      const women = womenRepresentation[id];
+      for (const notice of list.notices) {
+        for (const m of notice.matchAll(placeAndDate)) {
+          const place = Number(m[1]);
+          const date = `${m[4]}-${m[3].padStart(2, "0")}-${m[2].padStart(2, "0")}`;
+          if (place <= women.realisticPlaces && date > WOMEN_SOURCE.published) {
+            expect(women.changedAfter, `${id}: place ${place} changed on ${date}`).toEqual({ place, date });
+          }
+        }
+      }
+    }
+  });
+
   test("candidate links are top-20 only and on the party's own site", () => {
     const banned = /wikipedia\.org|facebook\.com|x\.com|twitter\.com|instagram\.com|tiktok\.com|youtube\.com|linkedin\.com|knesset\.gov\.il/;
     for (const [id, links] of Object.entries(candidateLinks)) {
